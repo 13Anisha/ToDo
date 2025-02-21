@@ -1,0 +1,185 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+body {
+  background: #eee;
+  background-image: url("https://www.transparenttextures.com/patterns/cubes.png");
+  padding: 0 10px;
+}
+
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.HeaderTitleText {
+  color: #f9f2f2;
+  font-family: "Rubik Vinyl", cursive;
+  font-weight: 200;
+}
+
+.HeaderTitle {
+  background-color: #ba9aec;
+  margin: auto -16px;
+  padding: 16px 32px;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+}
+
+.Note {
+  background: #fff;
+  border-radius: 7px;
+  box-shadow: 0 2px 5px #120215;
+  padding: 10px;
+  width: 240px;
+  height: 200px;
+  margin: 40px;
+  float: left;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.Note h1 {
+  font-size: 1.5em;
+  margin-bottom: 6px;
+}
+
+.Note p {
+  font-size: 1.3em;
+  margin-bottom: 15px;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  overflow-y: auto;
+  flex-grow: 1;
+  max-height: 130px;
+  padding-right: 5px;
+}
+
+.note button {
+  font-size: 1em;
+  position: relative;
+  float: right;
+  margin-right: 10px;
+  color: white;
+  border: none;
+  cursor: pointer;
+  background-color: #b289f4;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  
+}
+
+form {
+  position: relative;
+  width: 480px;
+  margin: 30px auto 20px auto;
+  background: #fff;
+  padding: 15px;
+  border-radius: 7px;
+  box-shadow: 0 1px 5px rgb(138, 137, 137);
+  transition: all 0.3s ease-in-out;
+}
+
+form input,
+form textarea {
+  width: 100%;
+  border: none;
+  padding: 4px;
+  outline: none;
+  font-size: 1.6em;
+  font-family: inherit;
+  resize: none;
+}
+
+form textarea {
+  height: 40px;
+  transition: height 0.3s ease-in-out;
+}
+
+form textarea:focus,
+form textarea:active {
+  height: 100px;
+}
+
+form button {
+  position: absolute;
+  right: 18px;
+  bottom: -18px;
+  background: #b592ecf0;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  outline: none;
+}
+
+@media screen and (max-width: 768px) {
+  .HeaderTitle {
+    padding: 12px 20px;
+  }
+
+  .Note {
+    width: 90%;
+    margin: 20px auto;
+    float: none;
+  }
+
+  form {
+    width: 100%;
+    padding: 10px;
+  }
+
+  form button {
+    right: 12px;
+    bottom: -16px;
+  }
+}
+
+form button:hover,
+.note button:hover {
+  background: #a47be4;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  transform: scale(1.1);
+  transition: all 0.2s ease-in-out;
+}
+
+.Note:hover {
+  background: #f9f6ff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+  transition: all 0.3s ease-in-out;
+}
+
+@media screen and (max-width: 480px) {
+  .HeaderTitle {
+    padding: 10px 15px;
+  }
+
+  .Note {
+    width: 100%;
+    margin: 10px auto;
+  }
+
+  form {
+    width: 100%;
+  }
+
+  form button {
+    width: 32px;
+    height: 32px;
+  }
+}
