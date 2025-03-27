@@ -75,10 +75,10 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 ![image](https://github.com/user-attachments/assets/3404847a-6adf-48d3-8614-23c6b4884ce9)
 
 
-**Features of NoteBox**
+## Features of NoteBox
 
 
-**Core Features**
+## Core Features
 
 
 **Create Notes** **–** Add new notes with a title and content.
