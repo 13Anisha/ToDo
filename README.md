@@ -75,3 +75,48 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 ![image](https://github.com/user-attachments/assets/3404847a-6adf-48d3-8614-23c6b4884ce9)
 
 
+**Features of NoteBox**
+
+
+**Core Features**
+
+
+**Create Notes** **–** Add new notes with a title and content.
+**Edit Notes –** Modify existing notes.
+**Delete Notes –** Remove unwanted notes.
+
+
+
+**Advanced Features**
+
+
+**Priority Levels–** Assign priorities (High, Medium, Low) to notes.
+**Outdoor Activity Toggle –** Mark notes as "Outdoor" to fetch weather data.
+**Weather Integration –** Fetches live weather data when "Outdoor Activity" is selected.
+**Geolocation Support–** Uses the user's location to get accurate weather information.
+
+
+**UI & UX Features**
+
+
+**Responsive Design –** Works well on desktops, tablets, and mobile devices.
+**Textarea for Long Notes –** Allows multi-line content input.
+**Dropdown for Priority Selection –** Easily choose note importance.
+**Icons for Better UX –** Uses icons (like the plus symbol from react-icons) for a better user experience.
+
+
+**Performance & Optimization**
+
+
+**State Management with React Hooks (useState) –** Efficiently manages note data.
+**API Calls with axios –** Fetches weather data using the OpenWeather API.
+**Asynchronous Functions (async/await) –** Handles API calls smoothly without UI blocking.
+
+
+**Hosting & Deployment**
+
+
+**Can be Deployed on Servers –** Works on Vercel.
+**Build Optimization (npm run build)–** Generates production-ready files for hosting.
+
+
