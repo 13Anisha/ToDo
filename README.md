@@ -91,7 +91,7 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 
 
 
-**Advanced Features**
+## Advanced Features
 
 
 **Priority Levels–** Assign priorities (High, Medium, Low) to notes.
@@ -106,7 +106,7 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 **Geolocation Support–** Uses the user's location to get accurate weather information.
 
 
-**UI & UX Features**
+## UI & UX Features
 
 
 **Responsive Design –** Works well on desktops, tablets, and mobile devices.
@@ -121,7 +121,7 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 **Icons for Better UX –** Uses icons (like the plus symbol from react-icons) for a better user experience.
 
 
-**Performance & Optimization**
+## Performance & Optimization
 
 
 **State Management with React Hooks (useState) –** Efficiently manages note data.
@@ -133,7 +133,7 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 **Asynchronous Functions (async/await) –** Handles API calls smoothly without UI blocking.
 
 
-**Hosting & Deployment**
+## Hosting & Deployment
 
 
 **Can be Deployed on Servers –** Works on Vercel.
