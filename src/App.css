@@ -8,6 +8,7 @@ html, body {
   height: 100%;
   display: flex;
   flex-direction: column;
+  font-family: "Arial", sans-serif;
 }
 
 body {
@@ -23,41 +24,143 @@ main {
   justify-content: flex-start;
 }
 
-.HeaderTitleText {
-  color: #f9f2f2;
-  font-family: "Rubik Vinyl", cursive;
-  font-weight: 200;
-}
-
 .HeaderTitle {
   background-color: #ba9aec;
-  margin: auto -16px;
   padding: 16px 32px;
-  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.HeaderTitleText {
+  color: #fff;
+  font-family: "Rubik Vinyl", cursive;
+  font-weight: 200;
+  font-size: xx-large;
+}
+
+.header-right {
+  display: flex;
+  gap: 16px;
+  
+}
+
+.auth-btn {
+  text-decoration: none;
+  padding: 10px 18px;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: all 0.3s ease-in-out;
+  border: none;
+  cursor: pointer;
+}
+
+.login-btn {
+  background-color: #7e56b0;
+  color: white;
+}
+
+.register-btn {
+  background-color: #7e56b0;
+  color: white;
+}
+
+.auth-btn:hover {
+  opacity: 0.8;
+}
+
+.hamburger {
+  background-color: #ba9aec;
+  display: none;
+  cursor: pointer;
+  border: none;
+  z-index: 1001;
+}
+
+
+
+@media screen and (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
+  .header-right {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background: #c8b2e2;
+    width: 200px;
+    display: none;
+    flex-direction: column;
+    text-align: center;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+
+  }
+
+  .header-right.open {
+    display: flex;
+    z-index: 1001;
+    background: none;
+    color: #333;
+    padding: 8px 0;
+    font-size: 1em;
+    font-weight: normal;
+    text-align: center;
+    width: 50%;
+    border: none;
+  }
+
+  .auth-btn {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    border-radius: 0;
+    background:none;
+  }
+  .login-btn{
+    color: #7e56b0;
+  }
+  .register-btn{
+    color: #7e56b0;
+  }
+
+  
 }
 
 .Note {
   background: #fff;
-  border-radius: 7px;
-  box-shadow: 0 2px 5px #120215;
-  padding: 10px;
-  width: 240px;
-  height: 200px;
-  margin: 40px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  padding: 12px;
+  width: 280px;
+  height: auto;
+  margin: 20px;
   float: left;
   overflow: hidden;
   display: flex;
   flex-direction: column;
+  transition: all 0.3s ease-in-out;
 }
 
 .Note h1 {
-  font-size: 1.5em;
+  font-size: 1.4em;
   margin-bottom: 6px;
 }
 
 .Note p {
-  font-size: 1.3em;
-  margin-bottom: 15px;
+  font-size: 1.2em;
+  margin-bottom: 10px;
   white-space: pre-wrap;
   word-wrap: break-word;
   overflow-y: auto;
@@ -66,19 +169,53 @@ main {
   padding-right: 5px;
 }
 
+.note.high {
+  border-left: 6px solid rgb(240, 127, 127);
+  background: #ffe5e5;
+}
+
+.note.medium {
+  border-left: 6px solid rgb(239, 192, 106);
+  background: #fff3e0;
+}
+
+.note.low {
+  border-left: 6px solid rgb(143, 249, 143);
+  background: #e5ffe5;
+}
+
+.weather {
+  font-size: 1em;
+  margin-top: 5px;
+  color: #555;
+}
+
 .note button {
   font-size: 1em;
-  position: relative;
-  float: right;
-  margin-right: 10px;
+  align-self: flex-end;
   color: white;
   border: none;
   cursor: pointer;
   background-color: #b289f4;
   border-radius: 50%;
-  width: 45px;
-  height: 45px;
-  
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease-in-out;
+}
+
+.note button:hover {
+  background: #a47be4;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  transform: scale(1.1);
+}
+
+.Note:hover {
+  transform: scale(1.02);
+  background: #f9f6ff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
 }
 
 form {
@@ -86,9 +223,9 @@ form {
   width: 480px;
   margin: 30px auto 20px auto;
   background: #fff;
-  padding: 15px;
-  border-radius: 7px;
-  box-shadow: 0 1px 5px rgb(138, 137, 137);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
   transition: all 0.3s ease-in-out;
 }
 
@@ -96,21 +233,52 @@ form input,
 form textarea {
   width: 100%;
   border: none;
-  padding: 4px;
+  padding: 8px;
   outline: none;
-  font-size: 1.6em;
+  font-size: 1.2em;
   font-family: inherit;
   resize: none;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  margin-bottom: 10px;
+  display: block;
 }
 
 form textarea {
-  height: 40px;
+  height: 50px;
   transition: height 0.3s ease-in-out;
 }
 
 form textarea:focus,
 form textarea:active {
-  height: 100px;
+  height: 120px;
+}
+
+form select {
+  width: 100%;
+  padding: 8px;
+  margin-top: 10px;
+  font-size: 1.1em;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+form label {
+  display: flex;
+  align-items: center;
+  font-size: 1.1em;
+  color: #444;
+  margin-top: 10px;
+  gap: 5px;
+}
+
+form input[type="checkbox"] {
+  width: auto;
+  transform: scale(1.2);
+  cursor: pointer;
+  margin-left: 0;
 }
 
 form button {
@@ -121,11 +289,18 @@ form button {
   color: #fff;
   border: none;
   border-radius: 50%;
-  width: 36px;
-  height: 36px;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+  width: 40px;
+  height: 40px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
   cursor: pointer;
   outline: none;
+  transition: all 0.3s ease-in-out;
+}
+
+form button:hover {
+  background: #a47be4;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  transform: scale(1.1);
 }
 
 @media screen and (max-width: 768px) {
@@ -135,39 +310,34 @@ form button {
 
   .Note {
     width: 90%;
-    margin: 20px auto;
+    margin: 15px auto;
     float: none;
   }
 
   form {
-    width: 100%;
-    padding: 10px;
+    width: 90%;
+    padding: 15px;
+  }
+
+  form label {
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 5px;
   }
 
   form button {
     right: 12px;
     bottom: -16px;
   }
-}
-
-form button:hover,
-.note button:hover {
-  background: #a47be4;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
-  transform: scale(1.1);
-  transition: all 0.2s ease-in-out;
-}
-
-.Note:hover {
-  background: #f9f6ff;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
-  transition: all 0.3s ease-in-out;
+  
 }
 
 @media screen and (max-width: 480px) {
   .HeaderTitle {
     padding: 10px 15px;
   }
+
+  
 
   .Note {
     width: 100%;
@@ -176,10 +346,20 @@ form button:hover,
 
   form {
     width: 100%;
+    padding: 10px;
+  }
+
+  form label {
+    font-size: 1em;
+    gap: 5px;
+  }
+
+  form input[type="checkbox"] {
+    margin-left: 0;
   }
 
   form button {
-    width: 32px;
-    height: 32px;
+    width: 35px;
+    height: 35px;
   }
 }
